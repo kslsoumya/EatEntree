@@ -1,0 +1,16 @@
+<div class="container" *ngIf = "itemsList">
+  <div class ="row">
+    <div class="col-md-6  col-lg-4 " *ngFor = "let item of itemsList">
+        <div class="card p-2"   [style.border]="item.nonVeg?'3px solid red':'3px solid green'"  style="height:25rem">
+        <img class="card-img-top img-thumbnail" src= {{item.image}}  alt="No Image" onerror="this.onerror=null;this.src='../../../assets/default.jpg;'">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+          <a  routerLink ="/detail/{{item.name}}" class="btn btn-outline-info" >Details</a>
+        </div>
+      </div>
+      <br/>
+
+    </div>
+  </div>
+  

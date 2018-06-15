@@ -1,0 +1,40 @@
+
+  <header>
+      <!-- Navbar -->
+      <nav class="navbar p-2">
+        <a class="navbar-brand" href="#">
+          <img src="https://www.eatentree.com/assets/theme/images/logo.png?ver=1.0.449" width="70" height="30" class="d-inline-block align-top"  
+          id="navEffect"alt="">
+        </a>
+        <h4 id="appTitle" class="d-none d-sm-block">Are You a Foodie??</h4>
+      </nav>
+    </header>
+
+<section>
+<div style="text-align:center">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light  bg-info">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink = "/home" style="color:black"><strong>Home</strong> <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" routerLink = "/list" style="color:black"><strong>Menu</strong> <span class="sr-only">(current)</span></a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+</div>
+<br/>
+<br/>
+<router-outlet></router-outlet>
+<footer class="footer">
+		<div class="container text-center">
+			<p class="text-muted"> &copy;  All Rights Reserved</p>
+		</div>
+	</footer>

@@ -1,0 +1,10 @@
+.carousel-indicators li {
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+}
+h5,h1 {
+    font-style: italic;
+    color: rgb(127, 11, 250);
+    font-weight: bold;
+}

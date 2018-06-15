@@ -1,0 +1,31 @@
+<div class="container " *ngIf="item">
+  <div class="row">
+    <div class="col-sm-12  mb-8">
+      <img src="item.image" class="img-fluid" alt="No Image" onerror="this.onerror=null;this.src='../../../assets/default.jpg';"
+      [style.border-left]="item.nonVeg?'8px solid red':'8px solid green'"  >
+
+      <br/><br/><br/>
+      <button class="btn btn-outline-danger m-2" routerLink="/list" >Back</button>
+
+      <button class="btn btn-outline-info m-2" (click)="trayClick()"> Add to tray</button>
+    </div>
+  </div>
+  <br/>
+    <div class="col-1"></div>
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <strong>
+            {{item.name | uppercase}}</strong>
+            <div class="w-100"></div>            <span class="badge badge-danger" *ngIf ="item.spicy">Spicy</span>
+            <span class="badge badge-success" *ngIf ="!item.spicy">Less Spicy</span>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" [innerHtml]="item.description"></li>
+        </ul>
+      </div>
+      <small class="text-muted">*Red border implies Non-Veg</small><br/>
+      <small class="text-muted">*Green border implies Non-Veg</small>
+
+    </div>
+  </div>
